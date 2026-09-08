@@ -1,0 +1,8 @@
+# Packages I install For Frontend
+
+
+1. npm install tailwindcss @tailwindcss/vite
+2. npm i react-router-dom
+3. npm i lenis
+4. npm i lucide-react
+5. npx shadcn@latest add @aceternity/flip-words
