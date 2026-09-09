@@ -7,20 +7,13 @@ function Navbar() {
 
     const navLinks = [
         { name: 'Home', href: '/' },
-        // { name: 'Golf', href: '#' },
         { name: 'Courses', href: '/courses' },
         { name: 'Course Directory', href: '/coursedirectory' },
-        // { name: 'Partner', href: '#' },
         { name: 'Insights/Blog', href: '/blogs' },
     ];
 
   return (
-    <motion.nav className="fixed top-5 left-0 right-0 z-50" 
-    initial={{y: -100, opacity: 0}} 
-    animate={{y: 0, opacity: 1}} 
-    viewport={{once: true}} 
-    transition={{type: 'spring', stiffness: 250, damping: 70, mass: 1}} 
-    >
+    <motion.nav className="fixed top-5 left-0 right-0 z-999" initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}} viewport={{once: true}} transition={{type: 'spring', stiffness: 250, damping: 70, mass: 1}} >
         
         <div className="max-w-6xl mx-auto flex items-center justify-between bg-white/20 rounded-4xl p-3 px-5">
 
