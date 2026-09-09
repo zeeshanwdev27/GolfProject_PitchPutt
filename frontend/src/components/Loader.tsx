@@ -26,7 +26,7 @@ function Loader({ onFinish }: { onFinish: () => void }) {
         {/* golf-Ball */}
         <motion.img layoutId="hero-ball" src={assets.glofball} alt="" className="absolute -top-2.5 w-7 h-7"
           initial={{ left: "-6%" }}
-          animate={{ left: "97%" }}
+          animate={{ left: "95%" }}
           transition={{ duration: 1.6, ease: "easeInOut" }}
         />
       </div>

@@ -1,4 +1,5 @@
 import HeroSection from "./HeroSection"
+import About from "./About"
 
 
 
@@ -8,6 +9,7 @@ function Home() {
   return (
     <>
     <HeroSection/>
+    <About/>
 
     </>
   )

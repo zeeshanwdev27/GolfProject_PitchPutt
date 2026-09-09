@@ -19,11 +19,13 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/5" />
       
       {/* Hero Content */}
-      <div className="relative z-10 mx-4 sm:mx-[5%] lg:mx-[10%] top-40 md:top-50 lg:top-60">
+      <div className="relative z-10 mx-4 sm:mx-[5%] lg:mx-[10%] pt-32 md:pt-50 lg:pt-60 pb-12">
 
         <div className="flex flex-col gap-7 text-white w-full">
 
-          <motion.h1 className="text-5xl md:text-6xl lg:text-7xl font-medium max-w-xl leading-15 lg:leading-20"  initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}>
+          <motion.h1 className="text-5xl md:text-6xl lg:text-7xl font-medium max-w-xl leading-15 lg:leading-20"  
+          initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
+          >
             Your Next Golf{" "} 
             <br /> 
             <span className="relative inline-block">
