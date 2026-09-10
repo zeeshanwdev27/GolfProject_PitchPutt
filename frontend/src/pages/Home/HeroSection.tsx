@@ -20,7 +20,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/5" />
       
       {/* Hero Content */}
-      <div className="relative z-10 mx-4 sm:mx-[5%] lg:mx-[10%] pt-32 md:pt-50 lg:pt-60 pb-12">
+      <div className="relative z-10 mx-4 sm:mx-[5%] lg:mx-[10%] pt-32 md:pt-50 pb-12">
 
         <div className="flex flex-col gap-7 text-white w-full">
 

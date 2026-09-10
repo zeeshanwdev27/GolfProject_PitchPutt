@@ -1,6 +1,6 @@
 import { assets } from "@/assets/assets"
 import { AnimatePresence, motion } from "motion/react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 function WhatYouGet() {
@@ -50,13 +50,20 @@ function WhatYouGet() {
 
     const filteredContentLists = contentLists.filter((data)=> data.title === activeTitle)
 
+    useEffect(() => {
+        filteredContentLists.forEach((item) => {
+            const img = new Image();
+            img.src = item.url;
+        });
+    }, [filteredContentLists]);
+
 
   return (
     <div className="relative h-full overflow-hidden">
         
-        <img src={assets.bgball} alt="" className="h-25 absolute right-0 top-5 z-50" />
-        <img src={assets.golfstick} alt="" className="hidden md:block h-60 absolute -left-20 top-0" />
-        <img src={assets.pinball} alt="" className="h-40 absolute bottom-15 right-0 " />
+        <img src={assets.bgball} alt="" className="hidden lg:block h-25 absolute right-0 top-5 z-50" />
+        <img src={assets.golfstick} alt="" className="h-60 absolute lg:-left-18 lg:top-0 max-lg:-right-15 max-lg:-top-25" />
+        <img src={assets.pinball} alt="" className="hidden lg:block h-40 absolute bottom-15 right-0 " />
 
 
         <div className="mx-4 sm:mx-[5%] lg:mx-[10%] py-20 flex flex-col gap-10 ">
@@ -68,10 +75,10 @@ function WhatYouGet() {
             </motion.h1>
 
 
-            <div className="flex gap-20">
+            <div className="flex flex-col lg:flex-row gap-20">
 
                 {/* Left Side */}
-                <div className="flex flex-col gap-5 w-full max-w-lg">
+                <motion.div initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }} className="flex flex-col gap-5 w-full max-w-lg">
                     {
                     titleLists.map((data, index)=>(
                     <div className={`rounded-lg p-6 flex justify-between items-center hover:scale-102 ${activeTitle === data.title ? 'bg-[#274E4B] text-white' : 'bg-[#B5DF46]' }`} onClick={()=> setActiveTitle(data.title)}>
@@ -83,11 +90,11 @@ function WhatYouGet() {
                     </div>
                     ))
                     }
-                </div>
+                </motion.div>
 
 
                 {/* RIght Side */}
-                <div className="w-full max-w-2xl relative min-h-112.5">
+                <motion.div initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }} className="w-full max-w-2xl relative min-h-112.5">
                     <AnimatePresence mode="wait">
                         {
                         filteredContentLists.map((data) => (
@@ -120,7 +127,7 @@ function WhatYouGet() {
                         ))
                         }
                     </AnimatePresence>
-                </div>
+                </motion.div>
 
         
             </div>
