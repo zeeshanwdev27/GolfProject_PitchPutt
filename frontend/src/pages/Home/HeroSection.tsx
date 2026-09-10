@@ -60,7 +60,7 @@ function HeroSection() {
               </motion.div>
             </motion.div>
 
-            <div className="flex flex-col md:flex-row gap-8 items-center lg:justify-end lg:order-3 order-1">
+            <div className="flex gap-8 items-center lg:justify-end lg:order-3 order-1">
               <div className="flex flex-col gap-3">
                  <Counter value={500} suffix="K+" />
                  <motion.p className="text-xl" initial={{ y: 30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}>Satisfied Customers</motion.p>
