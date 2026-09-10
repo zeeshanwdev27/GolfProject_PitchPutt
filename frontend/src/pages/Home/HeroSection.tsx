@@ -4,6 +4,7 @@ import { ArrowButton, PrimaryButton } from "../../components/Buttons"
 import * as motion from 'motion/react-client'
 import Counter from "../../components/Counter"
 import { FlipWords } from "@/components/ui/flip-words";
+import AnimatedText from "@/components/AnimatedText"
 
 function HeroSection() {
 
@@ -23,6 +24,8 @@ function HeroSection() {
 
         <div className="flex flex-col gap-7 text-white w-full">
 
+
+          {/* Heading */}
           <motion.h1 className="text-5xl md:text-6xl lg:text-7xl font-medium max-w-xl leading-15 lg:leading-20"  
           initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
           >
@@ -34,12 +37,13 @@ function HeroSection() {
             <br /> 
             Starts Now
           </motion.h1>
+        
+          {/* Animated paragraph */}
+          <AnimatedText as="p" className="text-xl lg:text-2xl max-w-2xl leading-8"
+          text="Unlock Crusade PitchPutt courses like Bigfoot and Vickery Creek. Play pitch & putt courses near you. Battle in USAPitchPutt tournaments. Unite to Grow the Game."
+          />
 
-          <motion.p className="text-xl lg:text-2xl max-w-2xl leading-8" initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}>
-            Unlock Crusade PitchPutt courses like Bigfoot and Vickery Creek. Play pitch & putt courses near you. Battle in USAPitchPutt tournaments. Unite to Grow the Game.
-          </motion.p>
-
-
+          {/* CTA */}
           <motion.div className="" initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}>
           <PrimaryButton className="flex items-center gap-3 py-3 lg:text-xl! w-fit">
             Join Now-Free Par Membership
@@ -48,6 +52,7 @@ function HeroSection() {
           </motion.div>
 
 
+          {/* Bottom  Ball & Counter */}
           <div className="grid lg:grid-cols-3 max-lg:gap-10 w-full mt-10">
             
             <div className="hidden lg:flex"></div>

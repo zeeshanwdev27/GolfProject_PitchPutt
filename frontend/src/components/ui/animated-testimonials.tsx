@@ -43,10 +43,11 @@ export const AnimatedfeaturedCourses = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="mx-auto max-w-sm px-4 pt-10 md:py-20 font-sans antialiased md:max-w-6xl md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 gap-10 md:gap-20 lg:gap-30 md:grid-cols-2">
+    <div className="mx-auto max-w-sm px-4 pt-10 md:py-20 font-sans antialiased md:max-w-6xl lg:max-w-7xl md:px-8 lg:px-12">
+      <div className="relative grid grid-cols-1 gap-10 md:gap-15 lg:gap-30 md:grid-cols-2">
+        
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-80 md:h-90 w-full">
             <AnimatePresence>
               {featuredCourses.map((testimonial, index) => (
                 <motion.div
@@ -92,6 +93,7 @@ export const AnimatedfeaturedCourses = ({
             </AnimatePresence>
           </div>
         </div>
+
         <div className="flex flex-col justify-between py-4">
           <motion.div
             key={active}
@@ -112,9 +114,11 @@ export const AnimatedfeaturedCourses = ({
               ease: "easeInOut",
             }}
           >
+
             <h3 className="text-3xl font-bold text-black dark:text-white">
               {featuredCourses[active].name}
             </h3>
+
             <p className="text-md text-[#274E4B] dark:text-neutral-500">
               {featuredCourses[active].tagline}
             </p>
@@ -155,6 +159,7 @@ export const AnimatedfeaturedCourses = ({
           </div>
 
         </div>
+
       </div>
     </div>
   );

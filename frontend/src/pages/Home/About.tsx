@@ -1,4 +1,5 @@
 import { assets } from "@/assets/assets"
+import AnimatedText from "@/components/AnimatedText"
 import { ArrowButton, PrimaryButton } from "@/components/Buttons"
 import * as motion from 'motion/react-client'
 import { useState } from "react"
@@ -73,15 +74,13 @@ function About() {
 
                 <div className="p-2 flex flex-col gap-10">
 
-                    <motion.p className="text-lg lg:text-xl max-w-2xl leading-8 lg:h-50"
-                    initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
-                    >
-                        {
-                            active === 'heading1' 
-                            ? "PitchPutt is more than a game—it’s a community built around fun, competition, and connection. We bring players together through exciting PitchPutt experiences, thoughtfully designed courses, and a shared passion for growing the game." 
-                            : "PitchPutt is the heartbeat of a growing short-game golf subculture, uniting passionate players through a shared love for the wedge and the putter. We are a vibrant community and a national network anchored by platforms like USAPitchPutt."
-                        }
-                    </motion.p>
+                    <AnimatedText key={active} as="p" className="text-lg lg:text-xl max-w-2xl leading-8 lg:h-50" triggerOnView={false}
+                    text={ 
+                        active === 'heading1' 
+                        ? "PitchPutt is more than a game—it's a community built around fun, competition, and connection. We bring players together through exciting PitchPutt experiences, thoughtfully designed courses, and a shared passion for growing the game."
+                        : "PitchPutt is the heartbeat of a growing short-game golf subculture, uniting passionate players through a shared love for the wedge and the putter. We are a vibrant community and a national network anchored by platforms like USAPitchPutt."
+                    }
+                    />
                     
                     <motion.div className="" initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}>
                         <PrimaryButton className="flex items-center gap-10 py-3 lg:text-lg! w-fit">
@@ -89,6 +88,7 @@ function About() {
                             <ArrowButton/>
                         </PrimaryButton>
                     </motion.div>
+                    
                 </div>
 
             </div>
