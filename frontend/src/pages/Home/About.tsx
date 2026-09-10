@@ -9,12 +9,14 @@ function About() {
     const [active, setActive] = useState('heading1')
 
   return (
-    <div className="relative h-full overflow-hidden ">
+    <div className="relative h-full overflow-hidden">
 
 
+        
+        
         <img src={assets.golfstick} alt="" className="hidden md:block h-60 absolute -right-12 -top-12" />
-        <img src={assets.bgball} alt="" className="h-25 absolute -left-5 -bottom-4" />
-        <img src={assets.pinball} alt="" className="h-40 absolute bottom-15 right-0" />
+        <img src={assets.bgball} alt="" className="h-25 absolute -left-5 -bottom-4 z-50" />
+        <img src={assets.pinball} alt="" className="h-40 absolute bottom-15 right-0 " />
 
 
         <div className="mx-4 sm:mx-[5%] lg:mx-[10%] py-20 flex flex-col lg:flex-row items-center gap-20">
