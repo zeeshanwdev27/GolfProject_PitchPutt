@@ -8,3 +8,8 @@
 5. npx shadcn@latest add @aceternity/flip-words
 7. npx shadcn@latest add carousel
 8. npm install embla-carousel-autoplay
+9. npm install react-map-gl mapbox-gl
+
+
+# Env
+. VITE_MAPBOX_TOKEN = '' 

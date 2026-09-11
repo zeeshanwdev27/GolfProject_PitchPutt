@@ -68,10 +68,10 @@ function Testimonials() {
 
                     {
                         testimonialsData.map((data)=>(
-                        <CarouselItem key={data.clientName}>
+                        <CarouselItem key={data.clientName} className="h-full">
                             <div className="flex flex-col gap-2 max-w-5xl mx-auto">
                                 <img src={assets.quote} alt="" className="h-15 w-25" />
-                                <h1 className="text-2xl md:text-3xl lg:text-5xl font-medium leading-10 lg:leading-14 text-center ">{data.quote}</h1>
+                                <h1 className="text-2xl md:text-3xl lg:text-5xl font-medium leading-8 lg:leading-12 text-center ">{data.quote}</h1>
                                 <div className="flex gap-5 items-center justify-center mt-5">
                                     <img src={data.src} alt="" className="w-17 h-17 rounded-full object-cover" />
                                     <div className="flex flex-col">

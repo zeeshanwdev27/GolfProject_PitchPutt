@@ -58,9 +58,9 @@ function HeroSection() {
             <div className="hidden lg:flex"></div>
 
             <motion.div className="relative flex justify-center items-center text-black lg:order-2 order-2" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}  viewport={{ once: true }}  transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.5 }}>
-              <motion.img layoutId="hero-ball" animate={{rotate:360, scale: 1}} transition={{ layout: { duration: 3, type: "spring", bounce: 0.20 }, rotate:{duration: 2, repeat: Infinity, ease: "linear", delay: 0.7}} } src={assets.glofball} className="h-40"></motion.img>
-              <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut",}} className="absolute w-25 h-25 border-3 border-black hover:bg-[#A4AA6A] rounded-full flex flex-col items-center justify-center cursor-pointer">
-                <ArrowDown className="w-12 h-12"/>
+              <motion.img layoutId="hero-ball" animate={{rotate:360, scale: 1}} transition={{ layout: { duration: 3, type: "spring", bounce: 0.20 }, rotate:{duration: 2, repeat: Infinity, ease: "linear", delay: 0.7}} } src={assets.glofball} className="h-35 md:h-40"></motion.img>
+              <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut",}} className="absolute w-22 h-22 md:w-25  md:h-25 border-3 border-black hover:bg-[#A4AA6A] rounded-full flex flex-col items-center justify-center cursor-pointer">
+                <ArrowDown className="w-10 h-10 md:w-12 md:h-12"/>
                 Scroll
               </motion.div>
             </motion.div>

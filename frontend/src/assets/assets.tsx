@@ -28,6 +28,12 @@ import client3 from './client3.jpg'
 import client4 from './client4.jpg'
 import client5 from './client5.jpg'
 import client6 from './client6.jpg'
+import insights_img1 from './Insights/img1.png'
+import insights_img2 from './Insights/img2.png'
+import insights_img3 from './Insights/img3.png'
+import insights_img4 from './Insights/img4.png'
+import insights_img5 from './Insights/img5.jpg'
+import insights_img6 from './Insights/img6.jpg'
 
 
 export const assets = {
@@ -44,6 +50,7 @@ export const assets = {
     wyg_img1, wyg_img2, wyg_img3, wyg_img4, wyg_img5,
     testimonials_bg, quote,
     client1,client2,client3,client4,client5,client6,
+    insights_img1, insights_img2, insights_img3, insights_img4, insights_img5, insights_img6,
 
 }
 

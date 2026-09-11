@@ -148,7 +148,7 @@ export const AnimatedfeaturedCourses = ({
               onClick={handlePrev}
               className="group/button flex h-12 w-12 items-center justify-center rounded-full bg-black dark:bg-neutral-800"
             >
-              <IconArrowLeft className="h-7 w-7 text-[#B5DF46] transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <IconArrowLeft className="h-7 w-7 text-white transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}

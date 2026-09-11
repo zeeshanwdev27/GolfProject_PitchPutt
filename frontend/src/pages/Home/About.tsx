@@ -20,26 +20,28 @@ function About() {
         <img src={assets.pinball} alt="" className="h-40 absolute bottom-15 right-0 " />
 
 
-        <div className="mx-4 sm:mx-[5%] lg:mx-[10%] py-20 flex flex-col lg:flex-row items-center gap-20">
+        <div className="mx-4 sm:mx-[5%] lg:mx-[10%] py-20 flex flex-col lg:flex-row items-center md:items-start lg:items-center gap-20">
 
             {/* Image */}
             <div className="relative">
 
-                <motion.div className="relative h-130 overflow-hidden rounded-2xl rounded-br-[5.5rem]" 
+                <motion.div className="relative h-80 lg:h-130 overflow-hidden rounded-2xl rounded-br-[5.5rem]" 
                  whileHover="hover" animate="rest" initial={{ y: 60, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                 >
-                    <img src={assets.golfshot} alt="" className="h-130 w-full object-cover rounded-2xl rounded-br-[5.5rem] border border-[#274E4B]" />
-                    
+                    <img src={assets.golfshot} alt="" className="h-80 lg:h-130 w-full object-cover rounded-2xl rounded-br-[5.5rem] border border-[#274E4B]" />
+
+                    {/* glass effect */}
                     <motion.div
-                    className="absolute top-0 left-0 h-[200%] w-25 -translate-y-1/4 -translate-x-1/2 rotate-45 bg-white/30 backdrop-blur-xs border-l border-white/30 pointer-events-none"
+                    className="hidden lg:block absolute top-0 left-0 h-[200%] w-25 -translate-y-1/4 -translate-x-1/2 rotate-45 bg-white/30 backdrop-blur-xs border-l border-white/30 pointer-events-none"
                     variants={{ rest: { x: "-250%" }, hover: { x: "600%" } }}
                     transition={{ duration: 0.7, ease: "easeInOut" }}
                     />
 
                 </motion.div>
-                
-                <div className="absolute bg-[#95B933]/60 h-45 w-45 rounded-full bottom-0 right-0 flex items-center justify-center">
-                    <motion.img src={assets.glofball} alt="" animate={{ rotate: 360, scale: 1 }} transition={{ layout: { duration: 3, type: "spring", bounce: 0.20 }, rotate: { duration: 2, repeat: Infinity, ease: "linear", delay: 0.7 } }} className="h-25"/>
+
+                {/* animated golf ball */}
+                <div className="absolute bg-[#95B933]/60 h-30 w-30 lg:h-45 lg:w-45 rounded-full bottom-3 right-1 lg:bottom-0 lg:right-0 flex items-center justify-center">
+                    <motion.img  src={assets.glofball} alt="" className="h-15 lg:h-25" animate={{ rotate: 360, scale: 1 }} transition={{ layout: { duration: 3, type: "spring", bounce: 0.20 }, rotate: { duration: 2, repeat: Infinity, ease: "linear", delay: 0.7 } }} />
                 </div>
 
             </div>

@@ -23,7 +23,7 @@ const Counter = ({ value, suffix = "" }: CounterProps) => {
   }, [count, value]);
 
   return (
-    <p className="text-6xl font-medium">
+    <p className="text-5xl md:text-6xl font-medium">
       <motion.span>{rounded}</motion.span>
       <span className="primary-text">{suffix}</span>
     </p>
