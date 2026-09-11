@@ -20,6 +20,14 @@ import wyg_img2 from './wyg_img2.jpg'
 import wyg_img3 from './wyg_img3.jpg'
 import wyg_img4 from './wyg_img4.jpg'
 import wyg_img5 from './wyg_img5.jpg'
+import testimonials_bg from './testimonials_bg.jfif'
+import quote from './quote.png'
+import client1 from './client1.jpg'
+import client2 from './client2.jpg'
+import client3 from './client3.jpg'
+import client4 from './client4.jpg'
+import client5 from './client5.jpg'
+import client6 from './client6.jpg'
 
 
 export const assets = {
@@ -31,22 +39,11 @@ export const assets = {
     golfstick,
     pinball,
     golfshot,
-    featured_img1,
-    featured_img2,
-    featured_img3,
-    featured_img4,
-    wyg_icon1,
-    wyg_icon2,
-    wyg_icon3,
-    wyg_icon4,
-    wyg_icon5,
-    wyg_img1,
-    wyg_img2,
-    wyg_img3,
-    wyg_img4,
-    wyg_img5
-
-
+    featured_img1, featured_img2, featured_img3, featured_img4,
+    wyg_icon1, wyg_icon2, wyg_icon3, wyg_icon4, wyg_icon5,
+    wyg_img1, wyg_img2, wyg_img3, wyg_img4, wyg_img5,
+    testimonials_bg, quote,
+    client1,client2,client3,client4,client5,client6,
 
 }
 
